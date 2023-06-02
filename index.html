@@ -22,19 +22,17 @@
                 <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
                 <small id="total"></small>
             </div>
-            <input type="number" id="count" placeholder="count">
+            <input type="number" id="count" placeholder="count <=100">
             <input type="text" id="category" placeholder="category">
             <button id="submit">Create</button>
             
         </div>
         <div class="output">
             <div class="searchBlock">
-                <input type="text" name="search" id="search" placeholder="search">
+                <input onkeyup="searchData(this.value)" type="text" name="search" id="search" placeholder="search">
                 <div class="btnSearch">
-                    <button id="searchTitle">Search By Title</button>
-                    
-                    <button id="searchCategory">Search By Category</button>
-                    
+                    <button onclick="dosearch(this.id)" id="searchTitle">Search By Title</button>
+                    <button onclick="dosearch(this.id)" id="searchCategory">Search By Category</button>
                 </div>
             </div>
             <div id="deleteAll"></div>
